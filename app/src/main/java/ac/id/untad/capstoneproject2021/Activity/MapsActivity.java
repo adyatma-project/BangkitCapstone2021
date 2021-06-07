@@ -1,4 +1,4 @@
-package ac.id.untad.capstoneproject2021;
+package ac.id.untad.capstoneproject2021.Activity;
 
 import android.Manifest;
 import android.app.PendingIntent;
@@ -19,7 +19,6 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingClient;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -29,9 +28,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-import java.util.ArrayList;
-
-import ac.id.untad.capstoneproject2021.databinding.ActivityMapsBinding;
+import ac.id.untad.capstoneproject2021.Helper.GeofenceHelper;
+import ac.id.untad.capstoneproject2021.R;
 
 @SuppressWarnings("ALL")
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener {

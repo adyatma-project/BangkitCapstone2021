@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".View_Bidan.SignupBidanActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Daftar Akun Bidan"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/loginconcept"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/shape_corner"
+            android:padding="2dp"
+            android:src="@drawable/signupconcept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewlogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/shape_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginconcept"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_command"
+                app:layout_constraintBottom_toTopOf="@id/edt_email_bidan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                android:id="@+id/progreebaebidan"/>
+
+
+
+
+            <TextView
+                android:id="@+id/tv_command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Anda Akan Mendaftar Sebagai Bidan, \n Silahkan Isi Data Dibawah Ini"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/viewlogin"
+                app:layout_constraintStart_toStartOf="@id/viewlogin"
+                app:layout_constraintTop_toTopOf="@id/viewlogin" />
+
+
+
+            <TextView
+                android:id="@+id/tv_email_bidan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="@id/viewlogin"
+                app:layout_constraintTop_toBottomOf="@id/tv_command" />
+
+            <EditText
+                android:id="@+id/edt_email_bidan"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/shape_edit"
+                app:layout_constraintEnd_toEndOf="@id/viewlogin"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_bidan"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_bidan" />
+
+
+            <TextView
+                android:id="@+id/tv_password_bidan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_email_bidan"
+                app:layout_constraintTop_toBottomOf="@id/edt_email_bidan" />
+
+            <EditText
+                android:id="@+id/edt_password_bidan"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:inputType="textPassword"
+                android:background="@drawable/shape_edit"
+                app:layout_constraintEnd_toEndOf="@+id/edt_email_bidan"
+                app:layout_constraintStart_toStartOf="@+id/tv_password_bidan"
+                app:layout_constraintTop_toBottomOf="@id/tv_password_bidan" />
+
+
+            <Button
+                android:id="@+id/btnsimpanbidan"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/shape_button"
+                android:text="DAFTAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/edt_password_bidan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_password_bidan"
+                app:layout_constraintTop_toBottomOf="@id/edt_password_bidan"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

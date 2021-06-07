@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ac.id.untad.capstoneproject2021">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -9,7 +9,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -18,10 +18,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject2021">
+        <activity android:name=".Activity.Nakes.SignupBidanActivity"></activity>
+        <activity android:name=".Activity.SigninActivity" />
+        <activity android:name=".Activity.StartActivity" />
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <receiver
-            android:name=".GeofenceBroadcastReceiver"
+            android:name=".Receiver.GeofenceBroadcastReceiver"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedReceiver" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,15 +50,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity" />
+            android:name=".Activity.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Activity.MainActivity" />
     </application>
 
 </manifest>

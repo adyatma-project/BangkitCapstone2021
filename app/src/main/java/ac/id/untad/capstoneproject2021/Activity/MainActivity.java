@@ -1,4 +1,4 @@
-package ac.id.untad.capstoneproject2021;
+package ac.id.untad.capstoneproject2021.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

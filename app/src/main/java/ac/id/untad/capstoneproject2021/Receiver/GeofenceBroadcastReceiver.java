@@ -1,9 +1,8 @@
-package ac.id.untad.capstoneproject2021;
+package ac.id.untad.capstoneproject2021.Receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.location.Location;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -11,6 +10,9 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingEvent;
 
 import java.util.List;
+
+import ac.id.untad.capstoneproject2021.Activity.MapsActivity;
+import ac.id.untad.capstoneproject2021.Helper.NotificationHelper;
 
 public class GeofenceBroadcastReceiver extends BroadcastReceiver {
 

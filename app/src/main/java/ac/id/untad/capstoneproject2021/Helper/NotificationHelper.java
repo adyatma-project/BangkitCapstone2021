@@ -1,4 +1,4 @@
-package ac.id.untad.capstoneproject2021;
+package ac.id.untad.capstoneproject2021.Helper;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -15,6 +15,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import java.util.Random;
+
+import ac.id.untad.capstoneproject2021.R;
 
 public class NotificationHelper extends ContextWrapper {
 

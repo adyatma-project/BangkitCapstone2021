@@ -1,4 +1,4 @@
-package ac.id.untad.capstoneproject2021;
+package ac.id.untad.capstoneproject2021.Helper;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -10,6 +10,8 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofenceStatusCodes;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.maps.model.LatLng;
+
+import ac.id.untad.capstoneproject2021.Receiver.GeofenceBroadcastReceiver;
 
 public class GeofenceHelper extends ContextWrapper {
 
