@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ac.id.untad.capstoneproject2021.Activity.Nakes.SignupBidanActivity;
+import ac.id.untad.capstoneproject2021.Activity.Umum.SignupUmum;
 import ac.id.untad.capstoneproject2021.databinding.ActivityStartBinding;
 
 public class StartActivity extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class StartActivity extends AppCompatActivity {
         imgibu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ibu = new Intent(StartActivity.this, SignupIbuActivity.class);
+                Intent ibu = new Intent(StartActivity.this, SignupUmum.class);
                 startActivity(ibu);
             }
         });
@@ -54,5 +55,4 @@ public class StartActivity extends AppCompatActivity {
         finish();
     }
 
-}
 }
