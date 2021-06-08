@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject2021">
-        <activity android:name=".Activity.Nakes.SignupBidanActivity"></activity>
+        <activity android:name=".Activity.Nakes.CompleteFormNakes"></activity>
+        <activity android:name=".Activity.Nakes.SignupBidanActivity" />
         <activity android:name=".Activity.SigninActivity" />
         <activity android:name=".Activity.StartActivity" />
         <activity

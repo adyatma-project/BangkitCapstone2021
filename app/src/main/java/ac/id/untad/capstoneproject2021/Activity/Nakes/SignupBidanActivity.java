@@ -63,7 +63,7 @@ public class SignupBidanActivity extends AppCompatActivity {
                                         Toast.makeText(SignupBidanActivity.this, "Mohon Maaf, Email Sudah Terdaftar", Toast.LENGTH_LONG).show();
                                     } else if (task.isSuccessful()) {
                                         prgbidan.setVisibility(View.GONE);
-                                        Intent ya = new Intent(SignupBidanActivity.this, CompleteProfileBidan.class);
+                                        Intent ya = new Intent(SignupBidanActivity.this, CompleteFormNakes.class);
                                         startActivity(ya);
                                         finish();
                                     }
