@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import ac.id.untad.capstoneproject2021.Activity.MainActivity;
 import ac.id.untad.capstoneproject2021.Adapter.DatePickerFragment;
 import ac.id.untad.capstoneproject2021.Model.User;
 import ac.id.untad.capstoneproject2021.databinding.ActivityCompleteProfileUmumBinding;
@@ -156,10 +158,11 @@ public class CompleteProfileUmum extends AppCompatActivity implements DatePicker
         String uid1 = (user.getUid());
 
         User userinformation = new User(uid1, nik, name, alamat, pekerjaan, email, jenis_kelamin, label, role, tanggallahir, nomorhp);
-        databaseReference1.child("Akun").child(user.getUid()).setValue(userinformation);
+        databaseReference1 = FirebaseDatabase.getInstance().getReference();
+        databaseReference1.child("Akun").child(uid1).setValue(userinformation);
 
         Toast.makeText(getApplicationContext(), "Data Telah Tersimpan, Terima Kasih", Toast.LENGTH_LONG).show();
-        Intent compbin = new Intent(CompleteProfileUmum.this, HomeUmum.class);
+        Intent compbin = new Intent(CompleteProfileUmum.this, MainActivity.class);
         startActivity(compbin);
         finish();
     }

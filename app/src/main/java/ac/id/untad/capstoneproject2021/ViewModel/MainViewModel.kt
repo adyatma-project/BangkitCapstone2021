@@ -1,6 +1,7 @@
 package ac.id.untad.capstoneproject2021.ViewModel
 
 import ac.id.untad.capstoneproject2021.Model.User
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -31,19 +32,23 @@ class MainViewModel : ViewModel(){
 
         val databaseReference = firebaseDatabase.getReference().child("Akun").child(user.uid)
 
+        Log.d("MVM", "Helo")
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userProfile = snapshot.getValue(
                     User::class.java
                 )!!
+                Log.d("MVM",userProfile.id)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                report.postValue(0)
+                report.postValue(1)
             }
         })
     }
 
     fun getData(): User = userProfile
+
+    fun getReport(): LiveData<Int?> = report
 
 }

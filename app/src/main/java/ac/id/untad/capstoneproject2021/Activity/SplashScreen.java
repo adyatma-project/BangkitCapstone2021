@@ -64,7 +64,7 @@ public class SplashScreen extends AppCompatActivity {
                                     startActivity(intent);
                                     finish();
                                 } else if (status.equals("umum")) {
-                                    Intent intent = new Intent(SplashScreen.this, HomeUmum.class);
+                                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

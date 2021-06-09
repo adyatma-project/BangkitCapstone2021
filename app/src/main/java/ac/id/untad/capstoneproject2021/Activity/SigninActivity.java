@@ -45,6 +45,8 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        activitySigninBinding = ActivitySigninBinding.inflate(getLayoutInflater());
+        setContentView(activitySigninBinding.getRoot());
         auth = FirebaseAuth.getInstance();
         auth = FirebaseAuth.getInstance();
         SignInButton.setOnClickListener(new View.OnClickListener() {

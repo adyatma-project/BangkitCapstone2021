@@ -10,6 +10,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        mainViewModel.loadData();
         subscribe();
 
 
@@ -50,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
         final Observer<Integer> observeLoad = new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
+                Log.d("SUB", integer.toString());
                 Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
             }
         };
+        mainViewModel.getReport().observe(this, observeLoad);
     }
 }

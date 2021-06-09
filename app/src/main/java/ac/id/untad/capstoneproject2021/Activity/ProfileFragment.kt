@@ -4,6 +4,7 @@ import ac.id.untad.capstoneproject2021.Model.User
 import ac.id.untad.capstoneproject2021.ViewModel.MainViewModel
 import ac.id.untad.capstoneproject2021.databinding.FragmentProfileBinding
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,13 +28,14 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MainViewModel::class.java]
+        val viewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory())[MainViewModel::class.java]
         val userData = viewModel.getData()
         setData(userData)
 
     }
 
     private fun setData(userData: User) {
+        Log.d("DATA", userData.alamat)
         binding.textEmailProfilUmum.text = userData.email
     }
 
