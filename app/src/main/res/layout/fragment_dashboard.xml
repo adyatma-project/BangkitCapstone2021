@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".DashboardFragment">
+    tools:context="ac.id.untad.capstoneproject2021.Activity.DashboardFragment">
 
     <ImageView
         android:id="@+id/dashImgView"

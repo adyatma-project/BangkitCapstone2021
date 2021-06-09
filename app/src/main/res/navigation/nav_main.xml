@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/home_nav"
-        android:name="ac.id.untad.capstoneproject2021.HomeFragment"
+        android:name="ac.id.untad.capstoneproject2021.Activity.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/dashboard_nav"
-        android:name="ac.id.untad.capstoneproject2021.DashboardFragment"
+        android:name="ac.id.untad.capstoneproject2021.Activity.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/profile_nav"
-        android:name="ac.id.untad.capstoneproject2021.ProfileFragment"
+        android:name="ac.id.untad.capstoneproject2021.Activity.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
