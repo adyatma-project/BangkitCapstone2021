@@ -1,9 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Nakes.HomeNakes">
+    android:background="#C7C3DA">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/bg_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@drawable/ic_bg_topheader"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_photo_home_nakes"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:flow_horizontalAlign="end"
+            app:layout_constraintBottom_toTopOf="@+id/behindofprediksi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/user_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/mo_re"
+            android:text="Selamat Datang Nakes"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mo_re"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/user_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/user_name"
+            app:layout_constraintTop_toBottomOf="@id/user_name"
+            tools:text="NAMA BIDAN" />
+
+
+        <ImageView
+            android:id="@+id/behinddaftaribu"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_edit"
+            android:src="@drawable/shape_edit"
+            app:layout_constraintEnd_toStartOf="@+id/behindofprediksi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bg_top_header" />
+
+
+        <ImageView
+            android:id="@+id/behindofprediksi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_edit"
+            app:layout_constraintBottom_toBottomOf="@+id/behinddaftaribu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/behinddaftaribu"
+            app:layout_constraintTop_toTopOf="@+id/behinddaftaribu" />
+
+
+        <ImageView
+            android:id="@+id/labelling"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/daftaricon"
+            app:layout_constraintBottom_toTopOf="@id/tx1"
+            app:layout_constraintEnd_toEndOf="@id/behinddaftaribu"
+            app:layout_constraintStart_toStartOf="@id/behinddaftaribu"
+            app:layout_constraintTop_toTopOf="@id/behinddaftaribu"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <TextView
+            android:id="@+id/tx1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mo_re"
+            android:inputType="textMultiLine"
+            android:text="Labelling"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/behinddaftaribu"
+            app:layout_constraintEnd_toEndOf="@+id/labelling"
+            app:layout_constraintStart_toStartOf="@+id/labelling"
+            app:layout_constraintTop_toBottomOf="@id/labelling" />
+
+
+        <ImageView
+            android:id="@+id/keluar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/logout"
+            app:layout_constraintBottom_toTopOf="@id/tx2"
+            app:layout_constraintEnd_toEndOf="@+id/behindofprediksi"
+            app:layout_constraintStart_toStartOf="@+id/behindofprediksi"
+            app:layout_constraintTop_toTopOf="@id/behindofprediksi"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <TextView
+            android:id="@+id/tx2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mo_re"
+            android:inputType="textMultiLine"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/behindofprediksi"
+            app:layout_constraintEnd_toEndOf="@+id/keluar"
+            app:layout_constraintStart_toStartOf="@+id/keluar"
+            app:layout_constraintTop_toBottomOf="@id/keluar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

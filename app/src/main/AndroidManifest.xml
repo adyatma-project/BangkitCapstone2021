@@ -18,7 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject2021">
-        <activity android:name=".Activity.Umum.HomeUmum"></activity>
+        <activity android:name=".Activity.Nakes.LabellingActivity"></activity>
+        <activity android:name=".Activity.Umum.UbahPasswordActivity" />
+        <activity android:name=".Activity.ResetPassword" />
+        <activity android:name=".Activity.Umum.HomeUmum" />
         <activity android:name=".Activity.Nakes.HomeNakes" />
         <activity android:name=".Activity.Umum.UmumProfile" />
         <activity android:name=".Activity.Nakes.ProfileNakes" />

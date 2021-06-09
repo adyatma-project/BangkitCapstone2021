@@ -1,4 +1,110 @@
 <resources>
     <string name="app_name">Capstone Project 2021</string>
     <string name="title_activity_maps">Map</string>
+
+
+    <string-array name="pendidikan">
+        <item>-</item>
+        <item>Tidak Sekolah</item>
+        <item>SD/Mi Sederajat</item>
+        <item>SMP/MTs Sederajat</item>
+        <item>SMA/MA Sederajat</item>
+        <item>D3 Sederajat</item>
+        <item>S1/D4 Sederajat</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+
+
+    <string-array name="kehamilanke">
+        <item>-</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="posisijanin">
+        <item>-</item>
+        <item>Normal</item>
+        <item>Sungsang</item>
+    </string-array>
+
+    <string-array name="yesno">
+        <item></item>
+        <item>Sudah</item>
+        <item>Belum</item>
+    </string-array>
+
+    <string-array name="jeniskelamin">
+        <item></item>
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <string-array name="alkon">
+        <item>-</item>
+        <item>Tidak Memakai Kontrasepsi</item>
+        <item>Pil KB</item>
+        <item>Kondom pria</item>
+        <item>Suntik KB</item>
+        <item>Implan</item>
+        <item>IUD (Intrauterine device)</item>
+        <item>Kondom wanita</item>
+        <item>Spermisida</item>
+        <item>Diafragma</item>
+        <item>Cervical cap</item>
+        <item>Koyo ortho evra</item>
+        <item>Cincin vagina</item>
+        <item>KB permanen</item>
+
+    </string-array>
+
+
+    <string-array name="kosong">
+        <item></item>
+    </string-array>
+
+
+    <string-array name="pekerjaan">
+        <item>-</item>
+        <item>TIDAK BEKERJA</item>
+        <item>PNS</item>
+        <item>KARYAWAN SWASTA</item>
+        <item>WIRAUSAHA</item>
+        <item>IBU RUMAH TANGGA</item>
+        <item>PETANI</item>
+        <item>NELAYAN</item>
+    </string-array>
+
+    <string-array name="agama">
+        <item>-</item>
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Katholik</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>KongHucu</item>
+    </string-array>
+
+
+    <string-array name="golongandarah">
+        <item>-</item>
+        <item>A</item>
+        <item>B</item>
+        <item>O</item>
+        <item>AB</item>
+    </string-array>
+
+
 </resources>

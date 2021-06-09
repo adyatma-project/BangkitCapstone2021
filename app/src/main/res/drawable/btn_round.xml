@@ -6,7 +6,7 @@
             <item>
                 <shape android:shape="rectangle">
                     <corners android:radius="20dp" />
-                    <solid android:color="@color/colorDarkGold" />
+                    <solid android:color="@color/black" />
                     <size android:width="110dp" android:height="40dp" />
                 </shape>
             </item>
@@ -19,7 +19,7 @@
             <item>
                 <shape android:shape="rectangle">
                     <corners android:radius="20dp" />
-                    <solid android:color="@color/colorDarkGold" />
+                    <solid android:color="@color/cardview_dark_background" />
                     <size android:width="110dp" android:height="40dp" />
                 </shape>
             </item>
@@ -33,7 +33,7 @@
             <item>
                 <shape android:shape="rectangle">
                     <corners android:radius="20dp" />
-                    <solid android:color="@color/colorGold" />
+                    <solid android:color="@color/cardview_dark_background" />
                     <size android:width="110dp" android:height="40dp" />
                 </shape>
             </item>

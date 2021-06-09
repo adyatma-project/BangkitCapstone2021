@@ -1,9 +1,5 @@
 package ac.id.untad.capstoneproject2021.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,23 +10,22 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
+import ac.id.untad.capstoneproject2021.Activity.Nakes.SignupBidanActivity;
 import ac.id.untad.capstoneproject2021.R;
 import ac.id.untad.capstoneproject2021.databinding.ActivitySigninBinding;
-import ac.id.untad.capstoneproject2021.databinding.ActivityStartBinding;
 
 public class SigninActivity extends AppCompatActivity {
-private ActivitySigninBinding activitySigninBinding;
     ProgressBar progressbarsignin;
+    private ActivitySigninBinding activitySigninBinding;
     private EditText SignInMail, SignInPass;
     private FirebaseAuth auth;
     private Button SignInButton;
@@ -86,73 +81,15 @@ private ActivitySigninBinding activitySigninBinding;
                                         alertDialog.show();
                                     }
                                 } else {
-                                    FirebaseDatabase fd1 = FirebaseDatabase.getInstance();
-                                    DatabaseReference databaseReference = fd1.getReference().child("Akun").child(auth.getUid());
-                                    //  final FirebaseUser user=firebaseAuth.getCurrentUser();
-                                    databaseReference.addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                            Userinformation userProfile = dataSnapshot.getValue(Userinformation.class);
-                                            String status = userProfile.getStatus();
-                                            if (status.equals("bidan")) {
-                                                Intent intent = new Intent(SigninActivity.this, HomeActivityBidan.class);
-                                                startActivity(intent);
-                                                finish();
-                                            }
-                                            else if (status.equals("penyuluh")) {
-                                                Intent intent = new Intent(SigninActivity.this, HomePenyuluh.class);
-                                                startActivity(intent);
-                                                finish();
-                                            }
-                                            else if (status.equals("ibu")) {
-                                                DatabaseReference dr1 = fd1.getReference().child("Akun").child(auth.getUid());
-                                                dr1.addValueEventListener(new ValueEventListener() {
-                                                    @Override
-                                                    public void onDataChange(DataSnapshot dataSnapshot) {
-                                                        IbuModel1 userProfile = dataSnapshot.getValue(IbuModel1.class);
-                                                        String uidbidan =(userProfile.getUidbidan());
 
-                                                        DatabaseReference dr2 = FirebaseDatabase.getInstance().getReference().child("Akun").child(uidbidan);
-                                                        dr2.addListenerForSingleValueEvent(new ValueEventListener() {
-                                                            @Override
-                                                            public void onDataChange(DataSnapshot snapshot) {
-                                                                if (snapshot.exists()) {
-                                                                    Intent intent = new Intent(SigninActivity.this, HomeActivityIbu.class);
-                                                                    startActivity(intent);
-                                                                    finish();
-                                                                } else {
-                                                                    Intent intent2 = new Intent(SigninActivity.this, ExportDataSignin.class);
-                                                                    startActivity(intent2);
-                                                                    finish();
-                                                                }
-                                                            }
 
-                                                            @Override
-                                                            public void onCancelled(DatabaseError error) {
-                                                            }
+                                    // Kondisi Intent Nakes Dan Umum
 
-                                                        });
-                                                    }
 
-                                                    @Override
-                                                    public void onCancelled(DatabaseError databaseError) {
-                                                        Toast.makeText(SigninActivity.this, databaseError.getCode(), Toast.LENGTH_SHORT).show();
-                                                    }
-                                                });
-                                            }
-                                            else{
-                                                Intent inendt = new Intent(SigninActivity.this, SplashScreen.class);
-                                                startActivity(inendt);
-                                                finish();
-                                            }
-                                        }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
-                                            Toast.makeText(SigninActivity.this, databaseError.getCode(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
                                 }
+
+
                             }
                         });
             }
