@@ -13,9 +13,7 @@ import ac.id.untad.capstoneproject2021.Activity.Umum.SignupUmum;
 import ac.id.untad.capstoneproject2021.databinding.ActivityStartBinding;
 
 public class StartActivity extends AppCompatActivity {
-    ImageView imgbidan;
-    ImageView imgibu, imgbkkbn;
-    Button btnmasuk;
+
     private ActivityStartBinding activity_startBinding;
 
     @Override
@@ -25,14 +23,14 @@ public class StartActivity extends AppCompatActivity {
         activity_startBinding = ActivityStartBinding.inflate(getLayoutInflater());
         setContentView(activity_startBinding.getRoot());
 
-        imgbidan.setOnClickListener(new View.OnClickListener() {
+        activity_startBinding.imgStartBidan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent bidan = new Intent(StartActivity.this, SignupBidanActivity.class);
                 startActivity(bidan);
             }
         });
-        imgibu.setOnClickListener(new View.OnClickListener() {
+        activity_startBinding.imgStartIbu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent ibu = new Intent(StartActivity.this, SignupUmum.class);
@@ -40,7 +38,7 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
-        btnmasuk.setOnClickListener(new View.OnClickListener() {
+        activity_startBinding.btnmasukstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent masuk = new Intent(StartActivity.this, SigninActivity.class);

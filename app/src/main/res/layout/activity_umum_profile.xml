@@ -1,9 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Umum.UmumProfile">
+    android:background="#fff">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="26dp"
+        tools:context=".View_Bidan.SignupBidanActivity">
+
+
+        <ProgressBar
+            android:id="@+id/progressbar_profile_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/shape_top_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profil_nakes"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintBottom_toBottomOf="@id/view_top"
+            app:layout_constraintEnd_toEndOf="@id/view_top"
+            app:layout_constraintStart_toStartOf="@id/view_top"
+            app:layout_constraintTop_toTopOf="@id/view_top"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/profile_nama_bidan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="NAMA NAKES"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_top"
+            app:layout_constraintEnd_toEndOf="@+id/img_profil_nakes"
+            app:layout_constraintStart_toStartOf="@+id/img_profil_nakes"
+            app:layout_constraintTop_toBottomOf="@+id/img_profil_nakes"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <ImageView
+            android:id="@+id/img_back_profile_nakes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="@id/view_top"
+            app:layout_constraintTop_toTopOf="@id/view_top" />
+
+        <ImageView
+            android:id="@+id/ic1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_top" />
+
+        <ImageView
+            android:id="@+id/ic2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic1" />
+
+
+        <ImageView
+            android:id="@+id/ic3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_alamat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic2" />
+
+        <ImageView
+            android:id="@+id/ic4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_pekerjaan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic3" />
+
+
+        <ImageView
+            android:id="@+id/ic51"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic4" />
+
+
+        <ImageView
+            android:id="@+id/ic5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic51" />
+
+
+        <ImageView
+            android:id="@+id/ic6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic5" />
+
+        <ImageView
+            android:id="@+id/ic7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic6" />
+
+
+        <TextView
+            android:id="@+id/ubahpasswordbidan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Ubah Password"
+            app:layout_constraintBottom_toBottomOf="@+id/ic1"
+            app:layout_constraintStart_toEndOf="@id/ic1"
+            app:layout_constraintTop_toTopOf="@id/ic1" />
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nomor Induk Kependudukan (NIK) :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic2"
+            app:layout_constraintTop_toTopOf="@+id/ic2" />
+
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Umur :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic3"
+            app:layout_constraintTop_toTopOf="@+id/ic3" />
+
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Pekerjaan :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic4"
+            app:layout_constraintTop_toTopOf="@+id/ic4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Jenis Kelamin :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic5"
+            app:layout_constraintTop_toTopOf="@+id/ic5" />
+
+        <TextView
+            android:id="@+id/tv51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Alamat E-Mail:"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic51"
+            app:layout_constraintTop_toTopOf="@+id/ic51" />
+
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tanggal Lahir :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic6"
+            app:layout_constraintTop_toTopOf="@+id/ic6" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nomor Handphone :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic7"
+            app:layout_constraintTop_toTopOf="@+id/ic7" />
+
+
+        <TextView
+            android:id="@+id/text_nik_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="NIK"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic2"
+            app:layout_constraintStart_toEndOf="@+id/ic2"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+
+        <TextView
+            android:id="@+id/text_almat_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic3"
+            app:layout_constraintStart_toEndOf="@+id/ic3"
+            app:layout_constraintTop_toBottomOf="@+id/tv3"
+            tools:text="ALAMAT" />
+
+
+        <TextView
+            android:id="@+id/text_pekerjaan_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic4"
+            app:layout_constraintStart_toEndOf="@+id/ic4"
+            app:layout_constraintTop_toBottomOf="@+id/tv4"
+            tools:text="PEKERJAAN" />
+
+        <TextView
+            android:id="@+id/text_jenis_kelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic5"
+            app:layout_constraintStart_toEndOf="@+id/ic5"
+            app:layout_constraintTop_toBottomOf="@+id/tv5"
+            tools:text="JENIS KELAMIN" />
+
+
+        <TextView
+            android:id="@+id/text_email_profil_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic51"
+            app:layout_constraintStart_toEndOf="@+id/ic51"
+            tools:text="EMAIL" />
+
+        <TextView
+            android:id="@+id/text_tanggallahir_profile_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic6"
+            app:layout_constraintStart_toEndOf="@+id/ic6"
+            app:layout_constraintTop_toBottomOf="@+id/tv6"
+            tools:text="DATA IBUNDA" />
+
+
+        <TextView
+            android:id="@+id/text_nomor_telepon_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ic7"
+            app:layout_constraintStart_toEndOf="@+id/ic7"
+            app:layout_constraintTop_toBottomOf="@+id/tv7"
+            tools:text="NOMOR TELEPON" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

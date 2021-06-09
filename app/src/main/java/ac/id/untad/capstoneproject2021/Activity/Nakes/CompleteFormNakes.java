@@ -150,14 +150,15 @@ public class CompleteFormNakes extends AppCompatActivity implements DatePickerFr
         String jenis_kelamin = activityCompleteFormNakesBinding.edtTanggalLahir.getText().toString().trim();
         //  String label = activityCompleteFormNakesBinding.edtTanggalLahir.getText().toString().trim();
         String role = "nakes";
+        String label = "0";
         String tanggallahir = activityCompleteFormNakesBinding.edtTanggalLahir.getText().toString().trim();
         String nomorhp = activityCompleteFormNakesBinding.edtTanggalLahir.getText().toString().trim();
         String uid1 = (user.getUid());
 
-        User userinformation = new User(name, tanggallahir, umur, nostr, kota, kecamatan, kelurahan, nohandphone, email, alamat, status);
+        User userinformation = new User(uid1, nik, name, alamat, pekerjaan, email, jenis_kelamin, label, role, tanggallahir, nomorhp);
         databaseReference1.child("Akun").child(user.getUid()).setValue(userinformation);
 
-        Toast.makeText(getApplicationContext(), "Data Bidan Telah Tersimpan, Terima Kasih", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Data Telah Tersimpan, Terima Kasih", Toast.LENGTH_LONG).show();
         Intent compbin = new Intent(CompleteFormNakes.this, HomeNakes.class);
         startActivity(compbin);
         finish();

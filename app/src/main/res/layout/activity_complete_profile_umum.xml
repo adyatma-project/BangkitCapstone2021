@@ -1,9 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Umum.CompleteProfileUmum">
+    android:background="#ECE8E8">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="26dp"
+        tools:context=".View_Bidan.SignupBidanActivity">
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/shape_top_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_edit_bidan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/camera"
+            app:layout_constraintBottom_toBottomOf="@id/view_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="SELAMAT DATANG \n Silahkan Lengkapi Data Dibawah Untuk Melanjutkan"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_top" />
+
+        <TextView
+            android:id="@+id/tvnama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Nama Sesuai KTP"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvtop" />
+
+        <EditText
+            android:id="@+id/edit_profile_bidan_nama"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tvnama" />
+
+        <TextView
+            android:id="@+id/tvNIK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Nomor KTP (NIK)"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_profile_bidan_nama" />
+
+        <EditText
+            android:id="@+id/edt_nomor_ktp_nakes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tvNIK" />
+
+
+        <TextView
+            android:id="@+id/tvalamatnakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Alamat Tempat Tinggal"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_nomor_ktp_nakes" />
+
+        <EditText
+            android:id="@+id/edt_tempat_tinggal_nakes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tvalamatnakes" />
+
+        <TextView
+            android:id="@+id/tvpekerjaannakes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Pekerjaan"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_pekerjaan_nakes"
+            app:layout_constraintStart_toStartOf="@+id/spin_pekerjaan_nakes"
+            app:layout_constraintTop_toBottomOf="@id/edt_tempat_tinggal_nakes" />
+
+        <Spinner
+            android:id="@+id/spin_pekerjaan_nakes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:entries="@array/pekerjaan"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tvpekerjaannakes" />
+
+
+        <TextView
+            android:id="@+id/tv_email_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="E-Mail"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spin_pekerjaan_nakes" />
+
+        <EditText
+            android:id="@+id/edt_email_nakes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:focusable="false"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email_nakes" />
+
+
+        <TextView
+            android:id="@+id/spin_jeniskelamin_nakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Jenis Kelamin"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_email_nakes" />
+
+        <Spinner
+            android:id="@+id/spin_jenis_kelamin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:entries="@array/jeniskelamin"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/spin_jeniskelamin_nakes" />
+
+
+        <TextView
+            android:id="@+id/tv_tanggal_lahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Tanggal Lahir"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spin_jenis_kelamin" />
+
+        <TextView
+            android:id="@+id/edt_tanggal_lahir"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:focusable="true"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir" />
+
+
+        <TextView
+            android:id="@+id/tvnotelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:text="Nomor Handphone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_tanggal_lahir" />
+
+        <EditText
+            android:id="@+id/edt_nomor_telepon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/shape_edit"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvnama"
+            app:layout_constraintTop_toBottomOf="@+id/tvnotelp" />
+
+
+        <Button
+            android:id="@+id/btn_editprofile_bidan_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_button"
+            android:text="SIMPAN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_nomor_telepon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

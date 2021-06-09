@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.Umum.SignupUmum">
+    android:layout_height="wrap_content"
+    android:background="@drawable/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".View_Ibu.SignupIbuActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Daftar Akun Umum"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/loginconcept"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/shape_corner"
+            android:padding="2dp"
+            android:src="@drawable/loginconcept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewlogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/shape_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginconcept"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/tv_command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Anda Akan Mendaftar Sebagai Umum, \n Silahkan Isi Data Dibawah Ini"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/viewlogin"
+                app:layout_constraintStart_toStartOf="@id/viewlogin"
+                app:layout_constraintTop_toTopOf="@id/viewlogin" />
+
+
+            <TextView
+                android:id="@+id/tv_email_ibu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="26dp"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="@id/viewlogin"
+                app:layout_constraintTop_toBottomOf="@+id/tv_command" />
+
+            <EditText
+                android:id="@+id/edt_email_ibu"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/shape_edit"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@id/viewlogin"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_ibu"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_ibu" />
+
+
+            <TextView
+                android:id="@+id/tv_password_ibu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_email_ibu"
+                app:layout_constraintTop_toBottomOf="@id/edt_email_ibu" />
+
+            <EditText
+                android:id="@+id/edt_password_ibu"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edit"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/edt_email_ibu"
+                app:layout_constraintStart_toStartOf="@+id/tv_password_ibu"
+                app:layout_constraintTop_toBottomOf="@id/tv_password_ibu" />
+
+
+            <ProgressBar
+                android:id="@+id/progresssignupibu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/btndaftaribu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_command" />
+
+            <Button
+                android:id="@+id/btndaftaribu"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="120dp"
+                android:background="@drawable/shape_button"
+                android:text="DAFTAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/edt_password_ibu"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_password_ibu"
+                app:layout_constraintTop_toBottomOf="@id/edt_password_ibu"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

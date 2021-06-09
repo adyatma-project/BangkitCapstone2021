@@ -28,7 +28,6 @@ public class HomeNakes extends AppCompatActivity {
     private ActivityHomeNakesBinding activityHomeNakesBinding;
     private Context context;
     private long backPressedTime;
-
     private DatabaseReference databaseReference, databaseReference1;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;

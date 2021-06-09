@@ -17,7 +17,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-light"
-            android:text="Daftar Akun Bidan"
+            android:text="Daftar Akun Nakes"
             android:textColor="@android:color/white"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -32,7 +32,7 @@
             android:layout_marginTop="100dp"
             android:background="@drawable/shape_corner"
             android:padding="2dp"
-            android:src="@drawable/signupconcept"
+            android:src="@drawable/loginconcept"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Anda Akan Mendaftar Sebagai Bidan, \n Silahkan Isi Data Dibawah Ini"
+                android:text="Anda Akan Mendaftar Sebagai Nakes, \n Silahkan Isi Data Dibawah Ini"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/viewlogin"

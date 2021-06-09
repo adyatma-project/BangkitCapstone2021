@@ -279,7 +279,7 @@
             tools:text="PEKERJAAN" />
 
         <TextView
-            android:id="@+id/tv_profile_kecamatan_bidan"
+            android:id="@+id/text_jenis_kelamin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
