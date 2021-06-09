@@ -42,16 +42,16 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
 
         switch (transitionType) {
             case Geofence.GEOFENCE_TRANSITION_ENTER:
-                Toast.makeText(context, "GEOFENCE_TRANSITION_ENTER", Toast.LENGTH_SHORT).show();
-                notificationHelper.sendHighPriorityNotification("GEOFENCE_TRANSITION_ENTER", "", MapsActivity.class);
+                Toast.makeText(context, "Anda Memasuki Kawasan Rawan COVID-19", Toast.LENGTH_SHORT).show();
+                notificationHelper.sendHighPriorityNotification("Warning", "Anda Memasuki Kawasan Rawan COVID-19", MapsActivity.class);
                 break;
             case Geofence.GEOFENCE_TRANSITION_DWELL:
-                Toast.makeText(context, "GEOFENCE_TRANSITION_DWELL", Toast.LENGTH_SHORT).show();
-                notificationHelper.sendHighPriorityNotification("GEOFENCE_TRANSITION_DWELL", "", MapsActivity.class);
+                Toast.makeText(context, "Anda Berada Di Pusat Kawasan Rawan COVID-19", Toast.LENGTH_SHORT).show();
+                notificationHelper.sendHighPriorityNotification("Danger", "Anda Berada Di Pusat Kawasan Rawan COVID-19", MapsActivity.class);
                 break;
             case Geofence.GEOFENCE_TRANSITION_EXIT:
-                Toast.makeText(context, "GEOFENCE_TRANSITION_EXIT", Toast.LENGTH_SHORT).show();
-                notificationHelper.sendHighPriorityNotification("GEOFENCE_TRANSITION_EXIT", "", MapsActivity.class);
+                Toast.makeText(context, "Anda Telah Keluar Dari Pusat Kawasan Rawan COVID-19", Toast.LENGTH_SHORT).show();
+                notificationHelper.sendHighPriorityNotification("Information", "Anda Telah Keluar Dari Pusat Kawasan Rawan COVID-19", MapsActivity.class);
                 break;
         }
 
